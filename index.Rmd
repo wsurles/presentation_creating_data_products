@@ -1,0 +1,94 @@
+---
+title       : Interactive Documents with R
+subtitle    : Slidify + Shiny
+author      : Ramnath Vaidyanathan
+job         : R Hacker
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [bootstrap, quiz, shiny, interactive]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+ext_widgets : {rCharts: [libraries/nvd3]}
+---
+
+## Slide 2
+
+--- &radio
+## Question 1
+
+How many lines of code did I write to make this quiz?
+
+1. 1
+2. _10_
+3. 100
+4. 1000
+
+*** .hint
+I used R not javascript/html/css
+
+*** .explanation
+```S
+Question 1
+
+How many lines of code did I ...
+write to make this quiz?
+
+1. 1
+2. _10_
+3. 100
+4. 1000
+
+'*** .hint'
+I used R not javascript/html/css
+
+'*** .explanation'
+This text went here
+```
+
+---
+## Interactive Chart
+
+```{r echo = F, results = 'asis'}
+require(rCharts)
+haireye = as.data.frame(HairEyeColor)
+n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
+  data = subset(haireye, Sex == 'Male')
+)
+n1
+```
+
+--- &interactive
+## Interactive Console
+
+```{r opts.label = 'interactive', results = 'asis'}
+require(googleVis)
+M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
+print(M1, tag = 'chart')
+```
+
+--- 
+
+```{r opts.label = 'shiny'}
+slidifyUI(
+  sidebarPanel(
+    selectInput('sex', 'Choose Sex', c('Male', 'Female')),
+    selectInput('type', 'Choose Type',
+      c('multiBarChart', 'multiBarHorizontalChart')
+    )
+  ),
+  mainPanel(
+    tags$div(id = 'nvd3plot', class='shiny-html-output nvd3 rChart')
+  )
+)
+```
+
+---
+## Resources
+
+Example slide deck
+http://slidify.github.io/dcmeetup/#1
+
+Adding D3 to slides
+http://ramnathv.github.io/rCharts/
+
+
