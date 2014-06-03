@@ -60,6 +60,7 @@ n1
 --- 
 
 ```{r opts.label = 'shiny'}
+library(shiny)
 slidifyUI(
   sidebarPanel(
     selectInput('sex', 'Choose Sex', c('Male', 'Female')),
