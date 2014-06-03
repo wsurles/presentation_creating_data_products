@@ -57,15 +57,6 @@ n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
 n1
 ```
 
---- &interactive
-## Interactive Console
-
-```{r opts.label = 'interactive', results = 'asis'}
-require(googleVis)
-M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
-print(M1, tag = 'chart')
-```
-
 --- 
 
 ```{r opts.label = 'shiny'}
