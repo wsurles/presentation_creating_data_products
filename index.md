@@ -58,13 +58,6 @@ chart1c351715064f
 ></iframe>
 <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
---- &interactive
-## Interactive Console
-
-<textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>require(googleVis)
-M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
-print(M1, tag = 'chart')</textarea>
-
 --- 
 
 <div class="row-fluid">
@@ -88,6 +81,13 @@ print(M1, tag = 'chart')</textarea>
 ---
 ## Resources
 
-http://slidify.github.io/dcmeetup/#1'
+Example slide deck http://slidify.github.io/dcmeetup/#1
+
+D3 in slides http://ramnathv.github.io/rCharts/
+
+rCharts http://ramnathv.github.io/rCharts/
+
+test
+
 
 
