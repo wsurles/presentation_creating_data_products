@@ -85,10 +85,10 @@ slidifyUI(
 ---
 ## Resources
 
-Example slide deck
-http://slidify.github.io/dcmeetup/#1
+Example slide deck http://slidify.github.io/dcmeetup/#1
 
-Adding D3 to slides
-http://ramnathv.github.io/rCharts/
+D3 in slides http://ramnathv.github.io/rCharts/
+
+rCharts http://ramnathv.github.io/rCharts/
 
 
