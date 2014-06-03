@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Interactive Documents with R</title>
+  <title>Creating an approachable data product</title>
   <meta charset="utf-8">
-  <meta name="description" content="Interactive Documents with R">
-  <meta name="author" content="Ramnath Vaidyanathan">
+  <meta name="description" content="Creating an approachable data product">
+  <meta name="author" content="William Surles">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -19,6 +19,7 @@
 <link rel=stylesheet href="libraries/widgets/nvd3/css/nv.d3.css"></link>
 <link rel=stylesheet href="libraries/widgets/nvd3/css/rNVD3.css"></link>
 <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/slidify.css"></link>
 
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
@@ -41,9 +42,9 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Interactive Documents with R</h1>
-    <h2>Slidify + Shiny</h2>
-    <p>Ramnath Vaidyanathan<br/>R Hacker</p>
+    <h1>Creating an approachable data product</h1>
+    <h2>R + Shiny</h2>
+    <p>William Surles<br/>Product Data Scientist @ Rally Software</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -51,16 +52,87 @@
 
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
-  <hgroup>
-    <h2>Slide 2</h2>
-  </hgroup>
   <article data-timings="">
-    
+    <!-- Limit image width and height -->
+
+<style type='text/css'>
+img {
+    max-height: 400px;
+    max-width: 800px;
+}
+</style>
+
+<!-- Center image on slide -->
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
+
+<h2>About Me</h2>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Who is Rally</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img style='margin-top: -40px' class="center" src='assets/img/rally-software.png' width=960px height=250px></img></p>
+
+<ul>
+<li>Founded in Boulder</li>
+<li>11 Years Old</li>
+<li>NYSE: RALY</li>
+<li>Focused on Business Agility </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>What I do at Rally</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>I’m on the UX team and </li>
+<li>I work with Marc Chipouras and the CREAM team
+
+<ul>
+<li>Team of data engineers and programmers</li>
+<li>Build and manage the data flow</li>
+</ul></li>
+<li>I focus on Data Analytics for the the ALM Product Line.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Data Product</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Share answers with the your teams</li>
+<li>Data is always up to date</li>
+<li>Viewers can choose their view</li>
+<li>Web capabilities</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
   <hgroup>
     <h2>Question 1</h2>
   </hgroup>
@@ -109,7 +181,7 @@ This text went here
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-3" style="background:;">
+<slide class="" id="slide-6" style="background:;">
   <hgroup>
     <h2>Interactive Chart</h2>
   </hgroup>
@@ -129,7 +201,10 @@ chart1c351715064f
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-4" style="background:;">
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Inputs to the analysis</h2>
+  </hgroup>
   <article data-timings="">
     <div class="row-fluid">
   <div class="span4">
@@ -153,7 +228,122 @@ chart1c351715064f
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-5" style="background:;">
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Widget Gallery</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="http://shiny.rstudio.com/gallery/widgets-gallery.html">http://shiny.rstudio.com/gallery/widgets-gallery.html</a></p>
+
+<p><img src="assets/img/widgets.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Example tool with code snipets</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="http://shiny.rstudio.com/gallery/kmeans-example.html">http://shiny.rstudio.com/gallery/kmeans-example.html</a></p>
+
+<p><img src="assets/img/cluster_example.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="fill nobackground" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Embed html easily</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="S">tabPanel(&quot;tableau&quot;, includeHTML(&quot;tableau_dashboard.html&quot;), align = &#39;center&#39;)
+</code></pre>
+
+<p><img src="assets/img/tableau_dashboard.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Basic Plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">r1 &lt;- rPlot(mpg ~ wt | am + vs, 
+  data = mtcars, 
+  color = &#39;gear&#39;,
+  type = &#39;point&#39;
+)
+r1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <article data-timings="">
+    <iframe src='
+assets/fig/unnamed-chunk-3.html
+' scrolling='no' seamless class='rChart 
+polycharts
+ '
+id=iframe-
+chart1c355a43512e
+></iframe>
+
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Add Controls</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">r1$addControls(&quot;x&quot;, &quot;wt&quot;, names(mtcars))
+r1$addControls(&quot;y&quot;, &quot;mpg&quot;, names(mtcars))
+r1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <article data-timings="">
+    <iframe src='
+assets/fig/unnamed-chunk-4.html
+' scrolling='no' seamless class='rChart 
+polycharts
+ '
+id=iframe-
+chart1c355a43512e
+></iframe>
+
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Publish Chart</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
   <hgroup>
     <h2>Resources</h2>
   </hgroup>
@@ -176,32 +366,98 @@ chart1c351715064f
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Slide 2'>
+        data-slide=1 title=''>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Question 1'>
+        data-slide=2 title='Who is Rally'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Interactive Chart'>
+        data-slide=3 title='What I do at Rally'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title=''>
+        data-slide=4 title='Data Product'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Resources'>
+        data-slide=5 title='Question 1'>
          5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Interactive Chart'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Inputs to the analysis'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Widget Gallery'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Example tool with code snipets'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Embed html easily'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Basic Plot'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title=''>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Add Controls'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title=''>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Publish Chart'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Resources'>
+         16
       </a>
     </li>
   </ul>
