@@ -75,11 +75,15 @@ n1 <- nPlot(y ~ x, group, type, data)
 - Focused on Business Agility 
 
 ---
-## What I do at Rally
+## How I work with teams
 - I work with UX team
 - I work with product owners and developer teams
 - I work with data engineers and programmers
 - I focus on data analytics for our main product
+
+--- .segue bg:blue
+
+## What
 
 ---
 ## Product Data Hub
@@ -106,24 +110,14 @@ n1 <- nPlot(y ~ x, group, type, data)
 * Add nice styles and web features
 * One place to see everything that matters for a team
 
---- .segue bg:blue
-
-## What
-
 ---
 ## Product Data Hub
 ![img](assets/img/data_hub.png)
-
 
 
 --- .segue bg:blue
 
 ## How
-
----
-## Product Data Hub
-![img](assets/img/data_hub.png)
-
 
 ---
 ## Build a simple shiny App
@@ -247,6 +241,8 @@ Example slide deck http://slidify.github.io/dcmeetup/#1
 D3 in slides http://ramnathv.github.io/rCharts/
 
 rCharts http://ramnathv.github.io/rCharts/
+
+My tutorial on github https://github.com/wsurles/shiny_workshop
 
 
 
