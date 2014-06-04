@@ -194,12 +194,12 @@ n1
 ```
 
 ---
-## Interactive analysis and chart
+## Explore interactive analysis and chart
 
 ![img](assets/img/interactive_analysis.png)
 
 ---
-## Check out exampes
+## Check out examples
 http://shiny.rstudio.com/gallery/kmeans-example.html
 
 ![img](assets/img/cluster_example.png)
@@ -254,7 +254,6 @@ D3 in slides http://ramnathv.github.io/rCharts/
 
 rCharts http://ramnathv.github.io/rCharts/
 
-test
 
 
 
