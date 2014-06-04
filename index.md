@@ -235,17 +235,17 @@ tabPanel("tableau", includeHTML("tableau_dashboard.html"), align = 'center')
 - Whatever
 
 ---
-## Resources
-
-Example slide deck http://slidify.github.io/dcmeetup/#1
-
-D3 in slides http://ramnathv.github.io/rCharts/
-
-rCharts http://ramnathv.github.io/rCharts/
+## Resources and References
 
 Shiny http://shiny.rstudio.com/
 
-My tutorial https://github.com/wsurles/shiny_workshop
+Shiny tutorial https://github.com/wsurles/shiny_workshop
+
+rCharts http://rcharts.io/
+
+Slidify http://slidify.github.io/
+
+Slidify example http://slidify.github.io/dcmeetup/#1
 
 
 
