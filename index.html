@@ -72,121 +72,9 @@ $(function() {
 });
 </script>
 
-<h2>About Me</h2>
+<h2>A D3 chart</h2>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-2" style="background:;">
-  <hgroup>
-    <h2>Who is Rally</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><img style='margin-top: -40px' class="center" src='assets/img/rally-software.png' width=960px height=250px></img></p>
-
-<ul>
-<li>Founded in Boulder</li>
-<li>11 Years Old</li>
-<li>NYSE: RALY</li>
-<li>Focused on Business Agility </li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-3" style="background:;">
-  <hgroup>
-    <h2>What I do at Rally</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul class = "build incremental">
-<li>I’m on the UX team and </li>
-<li>I work with Marc Chipouras and the CREAM team
-
-<ul>
-<li>Team of data engineers and programmers</li>
-<li>Build and manage the data flow</li>
-</ul></li>
-<li>I focus on Data Analytics for the the ALM Product Line.</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-4" style="background:;">
-  <hgroup>
-    <h2>Data Product</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>Share answers with the your teams</li>
-<li>Data is always up to date</li>
-<li>Viewers can choose their view</li>
-<li>Web capabilities</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Question 1</h2>
-  </hgroup>
-  <article data-timings="">
-    
-<div class="quiz quiz-single well ">
-  <p>How many lines of code did I write to make this quiz?</p>
-
-<ol>
-<li>1</li>
-<li><em>10</em></li>
-<li>100</li>
-<li>1000</li>
-</ol>
-
-  <button class="quiz-submit btn btn-primary">Submit</button>
-  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
-  <button class="quiz-show-answer btn btn-success">Show Answer</button>
-  <button class="quiz-clear btn btn-danger">Clear</button>
-  
-  <div class="quiz-hint">
-  <p>I used R not javascript/html/css</p>
-
-</div>
-<div class="quiz-explanation">
-  <pre><code class="S">Question 1
-
-How many lines of code did I ...
-write to make this quiz?
-
-1. 1
-2. _10_
-3. 100
-4. 1000
-
-&#39;*** .hint&#39;
-I used R not javascript/html/css
-
-&#39;*** .explanation&#39;
-This text went here
-</code></pre>
-
-</div>
-</div>
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-6" style="background:;">
-  <hgroup>
-    <h2>Interactive Chart</h2>
-  </hgroup>
-  <article data-timings="">
-    <iframe src='
+<iframe src='
 assets/fig/unnamed-chunk-1.html
 ' scrolling='no' seamless class='rChart 
 nvd3
@@ -201,28 +89,106 @@ chart1c351715064f
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Inputs to the analysis</h2>
+    <h2>Quiz</h2>
   </hgroup>
   <article data-timings="">
-    <div class="row-fluid">
-  <div class="span4">
-    <form class="well">
-      <label class="control-label" for="sex">Choose Sex</label>
-      <select id="sex"><option value="Male" selected>Male</option>
-<option value="Female">Female</option></select>
-      <script type="application/json" data-for="sex" data-nonempty="">{}</script>
-      <label class="control-label" for="type">Choose Type</label>
-      <select id="type"><option value="multiBarChart" selected>multiBarChart</option>
-<option value="multiBarHorizontalChart">multiBarHorizontalChart</option></select>
-      <script type="application/json" data-for="type" data-nonempty="">{}</script>
-    </form>
-  </div>
-  <div class="span8">
-    <div id="nvd3plot" class="shiny-html-output nvd3 rChart"></div>
-  </div>
+    
+<div class="quiz quiz-single well ">
+  <p>How many lines of code did I write to make this chart?</p>
+
+<ol>
+<li><em>1</em></li>
+<li>10</li>
+<li>100</li>
+<li>1000</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p>I used R not javascript/html/css</p>
+
 </div>
+<div class="quiz-explanation">
+  <pre><code class="s">n1 &lt;- nPlot(y ~ x, group, type, data)
+</code></pre>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>About Me</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Product Data Scientist at Rally Software</li>
+<li>Before that... Data analyst at two startups in Boulder</li>
+<li>Berore that... Masters in building energy science</li>
+<li>Before that... Mechanical engineer</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Who is Rally?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/rally-software.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Who is Rally?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Founded in Boulder</li>
+<li>11 Years Old</li>
+<li>NYSE: RALY</li>
+<li>Focused on Business Agility </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>What I do at Rally</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>I work with UX team</li>
+<li>I work with product owners and developer teams</li>
+<li>I work with data engineers and programmers</li>
+<li>I focus on data analytics for our main product</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Product Data Hub</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/data_hub.png" alt="img"></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -230,20 +196,199 @@ chart1c351715064f
 
 <slide class="" id="slide-8" style="background:;">
   <hgroup>
-    <h2>Widget Gallery</h2>
+    <h2>Product Data Hub</h2>
   </hgroup>
   <article data-timings="">
-    <p><a href="http://shiny.rstudio.com/gallery/widgets-gallery.html">http://shiny.rstudio.com/gallery/widgets-gallery.html</a></p>
-
-<p><img src="assets/img/widgets.png" alt="img"></p>
+    <ul>
+<li>Its a full featured bootstrap webpage</li>
+<li>Built with R and Shiny</li>
+<li>Share all data analysis for Product team</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
+<slide class="segue" id="slide-9" style="background:blue;">
   <hgroup>
-    <h2>Example tool with code snipets</h2>
+    <h2>Why</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Data Product</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Share data analysis with many teams</li>
+<li>Data is always ready for the team</li>
+<li>Less request to &#39;re-run&#39; analysis</li>
+<li>Teams can easily slice and dice data as needed</li>
+<li>Intuitive Navigation</li>
+<li>Help modals to explain details of chart</li>
+<li>Add nice styles and web features</li>
+<li>One place to see everything that matters for a team</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-11" style="background:blue;">
+  <hgroup>
+    <h2>What</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Product Data Hub</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/data_hub.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-13" style="background:blue;">
+  <hgroup>
+    <h2>How</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Product Data Hub</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/data_hub.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Build a simple shiny App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/histogram_example.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>ui.R</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">shinyUI(pageWithSidebar(
+  headerPanel(&quot;Simple Histogram App&quot;),
+  sidebarPanel(
+    selectInput(inputId = &quot;n_breaks&quot;,
+                label = &quot;Number of bins&quot;,
+                choices = c(10, 20, 25, 30, 50),
+                selected = 20
+                )
+  ),
+  mainPanel(
+    plotOutput(outputId = &quot;main_plot&quot;)
+  )
+))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>server.r</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">shinyServer(function(input,output){
+
+  output$main_plot &lt;- renderPlot({  
+    hist(faithful$eruptions,
+         breaks = as.numeric(input$n_breaks),
+         col = &quot;green&quot;,
+         xlab = &quot;Duration (minutes)&quot;)  
+  })
+})
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Add Interactive Charts</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src='
+assets/fig/unnamed-chunk-2.html
+' scrolling='no' seamless class='rChart 
+nvd3
+ '
+id=iframe-
+chart1c355961a45e
+></iframe>
+
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Add Interactive Charts</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">require(rCharts)
+haireye = as.data.frame(HairEyeColor)
+n1 &lt;- nPlot(Freq ~ Hair, 
+  group = &#39;Eye&#39;,
+  data = subset(haireye, Sex == &#39;Male&#39;),
+  type = &#39;multiBarChart&#39;
+)
+n1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Interactive analysis and chart</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/interactive_analysis.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Check out exampes</h2>
   </hgroup>
   <article data-timings="">
     <p><a href="http://shiny.rstudio.com/gallery/kmeans-example.html">http://shiny.rstudio.com/gallery/kmeans-example.html</a></p>
@@ -254,96 +399,89 @@ chart1c351715064f
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="fill nobackground" id="slide-10" style="background:;">
+<slide class="" id="slide-22" style="background:;">
   <hgroup>
-    <h2>Embed html easily</h2>
+    <h2>Add more input options</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="S">tabPanel(&quot;tableau&quot;, includeHTML(&quot;tableau_dashboard.html&quot;), align = &#39;center&#39;)
+    <p><a href="http://shiny.rstudio.com/gallery/widgets-gallery.html">http://shiny.rstudio.com/gallery/widgets-gallery.html</a></p>
+
+<p><img src="assets/img/widgets.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Add more functionality</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="http://shiny.rstudio.com/reference/shiny/latest/">http://shiny.rstudio.com/reference/shiny/latest/</a></p>
+
+<p><img src="assets/img/functions.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Add navigation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="http://shiny.rstudio.com/reference/shiny/latest/">http://shiny.rstudio.com/reference/shiny/latest/</a></p>
+
+<p><img src="assets/img/nav.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Chose a theme</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="http://bootswatch.com/">http://bootswatch.com/</a></p>
+
+<p><img src="assets/img/theme.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Embed other pages</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/tableau_dashboard.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Embed other pages</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">tabPanel(&quot;tableau&quot;, includeHTML(&quot;tableau_dashboard.html&quot;), align = &#39;center&#39;)
 </code></pre>
 
-<p><img src="assets/img/tableau_dashboard.png" alt="img"></p>
+<ul>
+<li>Tableau</li>
+<li>Splunk</li>
+<li>You tube</li>
+<li>Whatever</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
-  <hgroup>
-    <h2>Basic Plot</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">r1 &lt;- rPlot(mpg ~ wt | am + vs, 
-  data = mtcars, 
-  color = &#39;gear&#39;,
-  type = &#39;point&#39;
-)
-r1
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-12" style="background:;">
-  <article data-timings="">
-    <iframe src='
-assets/fig/unnamed-chunk-3.html
-' scrolling='no' seamless class='rChart 
-polycharts
- '
-id=iframe-
-chart1c355a43512e
-></iframe>
-
-<style>iframe.rChart{ width: 100%; height: 400px;}</style>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-13" style="background:;">
-  <hgroup>
-    <h2>Add Controls</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">r1$addControls(&quot;x&quot;, &quot;wt&quot;, names(mtcars))
-r1$addControls(&quot;y&quot;, &quot;mpg&quot;, names(mtcars))
-r1
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-14" style="background:;">
-  <article data-timings="">
-    <iframe src='
-assets/fig/unnamed-chunk-4.html
-' scrolling='no' seamless class='rChart 
-polycharts
- '
-id=iframe-
-chart1c355a43512e
-></iframe>
-
-<style>iframe.rChart{ width: 100%; height: 400px;}</style>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-15" style="background:;">
-  <hgroup>
-    <h2>Publish Chart</h2>
-  </hgroup>
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-16" style="background:;">
+<slide class="" id="slide-28" style="background:;">
   <hgroup>
     <h2>Resources</h2>
   </hgroup>
@@ -372,92 +510,164 @@ chart1c355a43512e
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Who is Rally'>
+        data-slide=2 title='Quiz'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='What I do at Rally'>
+        data-slide=3 title='About Me'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Data Product'>
+        data-slide=4 title='Who is Rally?'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Question 1'>
+        data-slide=5 title='Who is Rally?'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Interactive Chart'>
+        data-slide=6 title='What I do at Rally'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Inputs to the analysis'>
+        data-slide=7 title='Product Data Hub'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Widget Gallery'>
+        data-slide=8 title='Product Data Hub'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Example tool with code snipets'>
+        data-slide=9 title='Why'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Embed html easily'>
+        data-slide=10 title='Data Product'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Basic Plot'>
+        data-slide=11 title='What'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title=''>
+        data-slide=12 title='Product Data Hub'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Add Controls'>
+        data-slide=13 title='How'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title=''>
+        data-slide=14 title='Product Data Hub'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Publish Chart'>
+        data-slide=15 title='Build a simple shiny App'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Resources'>
+        data-slide=16 title='ui.R'>
          16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='server.r'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Add Interactive Charts'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Add Interactive Charts'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Interactive analysis and chart'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Check out exampes'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Add more input options'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Add more functionality'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Add navigation'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Chose a theme'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Embed other pages'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Embed other pages'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='Resources'>
+         28
       </a>
     </li>
   </ul>

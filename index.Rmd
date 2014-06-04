@@ -27,11 +27,47 @@ $(function() {
 });
 </script>
 
-## About Me
+## A D3 chart
+```{r echo = F, results = 'asis'}
+require(rCharts)
+haireye = as.data.frame(HairEyeColor)
+n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
+  data = subset(haireye, Sex == 'Male')
+)
+n1
+```
+
+--- &radio
+## Quiz
+
+How many lines of code did I write to make this chart?
+
+1. _1_
+2. 10
+3. 100
+4. 1000
+
+*** .hint
+I used R not javascript/html/css
+
+*** .explanation
+```s
+n1 <- nPlot(y ~ x, group, type, data)
+```
 
 ---
-## Who is Rally
-<img style='margin-top: -40px' class="right" src='assets/img/rally-software.png' width=300px height=250px></img>
+## About Me
+- Product Data Scientist at Rally Software
+- Before that... Data analyst at two startups in Boulder
+- Berore that... Masters in building energy science
+- Before that... Mechanical engineer
+
+---
+## Who is Rally?
+![img](assets/img/rally-software.png)
+
+---
+## Who is Rally?
 
 - Founded in Boulder
 - 11 Years Old
@@ -40,54 +76,94 @@ $(function() {
 
 ---
 ## What I do at Rally
-> - I’m on the UX team and 
-> - I work with Marc Chipouras and the CREAM team
->  - Team of data engineers and programmers
->  - Build and manage the data flow
-> - I focus on Data Analytics for the the ALM Product Line.
+- I work with UX team
+- I work with product owners and developer teams
+- I work with data engineers and programmers
+- I focus on data analytics for our main product
+
+---
+## Product Data Hub
+![img](assets/img/data_hub.png)
+
+---
+## Product Data Hub
+- Its a full featured bootstrap webpage
+- Built with R and Shiny
+- Share all data analysis for Product team
+
+--- .segue bg:blue
+
+## Why
 
 ---
 ## Data Product
-* Share answers with the your teams
-* Data is always up to date
-* Viewers can choose their view
-* Web capabilities
+* Share data analysis with many teams
+* Data is always ready for the team
+* Less request to 're-run' analysis
+* Teams can easily slice and dice data as needed
+* Intuitive Navigation
+* Help modals to explain details of chart
+* Add nice styles and web features
+* One place to see everything that matters for a team
+
+--- .segue bg:blue
+
+## What
+
+---
+## Product Data Hub
+![img](assets/img/data_hub.png)
 
 
---- &radio
-## Question 1
 
-How many lines of code did I write to make this quiz?
+--- .segue bg:blue
 
-1. 1
-2. _10_
-3. 100
-4. 1000
+## How
 
-*** .hint
-I used R not javascript/html/css
+---
+## Product Data Hub
+![img](assets/img/data_hub.png)
 
-*** .explanation
-```S
-Question 1
 
-How many lines of code did I ...
-write to make this quiz?
+---
+## Build a simple shiny App
+![img](assets/img/histogram_example.png)
 
-1. 1
-2. _10_
-3. 100
-4. 1000
-
-'*** .hint'
-I used R not javascript/html/css
-
-'*** .explanation'
-This text went here
+---
+## ui.R
+```{r ui, results = 'hide', tidy = F, message = F}
+shinyUI(pageWithSidebar(
+  headerPanel("Simple Histogram App"),
+  sidebarPanel(
+    selectInput(inputId = "n_breaks",
+                label = "Number of bins",
+                choices = c(10, 20, 25, 30, 50),
+                selected = 20
+                )
+  ),
+  mainPanel(
+    plotOutput(outputId = "main_plot")
+  )
+))
 ```
 
 ---
-## Interactive Chart
+## server.r
+```{r server, results = 'hide', tidy = F, message = F}
+shinyServer(function(input,output){
+
+  output$main_plot <- renderPlot({  
+    hist(faithful$eruptions,
+         breaks = as.numeric(input$n_breaks),
+         col = "green",
+         xlab = "Duration (minutes)")  
+  })
+})
+```
+
+
+---
+## Add Interactive Charts
 
 ```{r echo = F, results = 'asis'}
 require(rCharts)
@@ -99,92 +175,69 @@ n1
 ```
 
 ---
-## Inputs to the analysis
+## Add Interactive Charts
 
-```{r opts.label = 'shiny'}
-slidifyUI(
-  sidebarPanel(
-    selectInput('sex', 'Choose Sex', c('Male', 'Female')),
-    selectInput('type', 'Choose Type',
-      c('multiBarChart', 'multiBarHorizontalChart')
-    )
-  ),
-  mainPanel(
-    tags$div(id = 'nvd3plot', class='shiny-html-output nvd3 rChart')
-  )
-)
-
-shinyServer(function(input, output) {
+```{r ichart, results = 'hide', tidy = F, message = F}
 require(rCharts)
-output$nvd3plot <- renderChart({
-  haireye = as.data.frame(HairEyeColor)
-  n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = input$type,
-              data = subset(haireye, Sex == input$sex)
-  )
-  n1$set(dom = 'nvd3plot', width = 600)
-  n1
-  })
-})
+haireye = as.data.frame(HairEyeColor)
+n1 <- nPlot(Freq ~ Hair, 
+  group = 'Eye',
+  data = subset(haireye, Sex == 'Male'),
+  type = 'multiBarChart'
+)
+n1
 ```
 
 ---
-## Widget Gallery
-http://shiny.rstudio.com/gallery/widgets-gallery.html
+## Interactive analysis and chart
 
+![img](assets/img/interactive_analysis.png)
+
+---
+## Check out exampes
+http://shiny.rstudio.com/gallery/kmeans-example.html
+
+![img](assets/img/cluster_example.png)
+
+---
+## Add more input options
+http://shiny.rstudio.com/gallery/widgets-gallery.html
 
 ![img](assets/img/widgets.png)
 
 ---
-## Example tool with code snipets
-http://shiny.rstudio.com/gallery/kmeans-example.html
+## Add more functionality
+http://shiny.rstudio.com/reference/shiny/latest/
 
+![img](assets/img/functions.png)
 
-![img](assets/img/cluster_example.png)
+--- 
+## Add navigation
+http://shiny.rstudio.com/reference/shiny/latest/
 
---- .fill .nobackground
-## Embed html easily
+![img](assets/img/nav.png)
 
-```S
-tabPanel("tableau", includeHTML("tableau_dashboard.html"), align = 'center')
-```
+---
+## Chose a theme
+http://bootswatch.com/
+
+![img](assets/img/theme.png)
+
+--- 
+## Embed other pages
 
 ![img](assets/img/tableau_dashboard.png)
 
 ---
-## Basic Plot
+## Embed other pages
 
-```{r chart1, eval = F, tidy = F, results = 'hide'}
-r1 <- rPlot(mpg ~ wt | am + vs, 
-  data = mtcars, 
-  color = 'gear',
-  type = 'point'
-)
-r1
+```{r embed, results = 'hide', tidy = F, message = F, warning=FALSE, error=FALSE}
+tabPanel("tableau", includeHTML("tableau_dashboard.html"), align = 'center')
 ```
-
----
-
-```{r ref.label = 'chart1', results = 'asis', echo = F}
-```
-
----
-
-## Add Controls
-
-```{r chart2, eval = F, tidy = F, results = 'hide'}
-r1$addControls("x", "wt", names(mtcars))
-r1$addControls("y", "mpg", names(mtcars))
-r1
-```
-
----
-
-```{r ref.label = 'chart2', results = 'asis', echo = F}
-```
-
----
-
-## Publish Chart
+- Tableau
+- Splunk
+- You tube
+- Whatever
 
 ---
 ## Resources

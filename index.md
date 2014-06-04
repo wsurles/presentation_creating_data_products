@@ -27,68 +27,7 @@ $(function() {
 });
 </script>
 
-## About Me
-
----
-## Who is Rally
-<img style='margin-top: -40px' class="center" src='assets/img/rally-software.png' width=960px height=250px></img>
-
-- Founded in Boulder
-- 11 Years Old
-- NYSE: RALY
-- Focused on Business Agility 
-
----
-## What I do at Rally
-> - I’m on the UX team and 
-> - I work with Marc Chipouras and the CREAM team
->  - Team of data engineers and programmers
->  - Build and manage the data flow
-> - I focus on Data Analytics for the the ALM Product Line.
-
----
-## Data Product
-* Share answers with the your teams
-* Data is always up to date
-* Viewers can choose their view
-* Web capabilities
-
-
---- &radio
-## Question 1
-
-How many lines of code did I write to make this quiz?
-
-1. 1
-2. _10_
-3. 100
-4. 1000
-
-*** .hint
-I used R not javascript/html/css
-
-*** .explanation
-```S
-Question 1
-
-How many lines of code did I ...
-write to make this quiz?
-
-1. 1
-2. _10_
-3. 100
-4. 1000
-
-'*** .hint'
-I used R not javascript/html/css
-
-'*** .explanation'
-This text went here
-```
-
----
-## Interactive Chart
-
+## A D3 chart
 <iframe src='
 assets/fig/unnamed-chunk-1.html
 ' scrolling='no' seamless class='rChart 
@@ -99,101 +38,212 @@ chart1c351715064f
 ></iframe>
 <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
----
-## Inputs to the analysis
+--- &radio
+## Quiz
 
-<div class="row-fluid">
-  <div class="span4">
-    <form class="well">
-      <label class="control-label" for="sex">Choose Sex</label>
-      <select id="sex"><option value="Male" selected>Male</option>
-<option value="Female">Female</option></select>
-      <script type="application/json" data-for="sex" data-nonempty="">{}</script>
-      <label class="control-label" for="type">Choose Type</label>
-      <select id="type"><option value="multiBarChart" selected>multiBarChart</option>
-<option value="multiBarHorizontalChart">multiBarHorizontalChart</option></select>
-      <script type="application/json" data-for="type" data-nonempty="">{}</script>
-    </form>
-  </div>
-  <div class="span8">
-    <div id="nvd3plot" class="shiny-html-output nvd3 rChart"></div>
-  </div>
-</div>
+How many lines of code did I write to make this chart?
+
+1. _1_
+2. 10
+3. 100
+4. 1000
+
+*** .hint
+I used R not javascript/html/css
+
+*** .explanation
+```s
+n1 <- nPlot(y ~ x, group, type, data)
+```
 
 ---
-## Widget Gallery
+## About Me
+- Product Data Scientist at Rally Software
+- Before that... Data analyst at two startups in Boulder
+- Berore that... Masters in building energy science
+- Before that... Mechanical engineer
+
+---
+## Who is Rally?
+![img](assets/img/rally-software.png)
+
+---
+## Who is Rally?
+
+- Founded in Boulder
+- 11 Years Old
+- NYSE: RALY
+- Focused on Business Agility 
+
+---
+## What I do at Rally
+- I work with UX team
+- I work with product owners and developer teams
+- I work with data engineers and programmers
+- I focus on data analytics for our main product
+
+---
+## Product Data Hub
+![img](assets/img/data_hub.png)
+
+---
+## Product Data Hub
+- Its a full featured bootstrap webpage
+- Built with R and Shiny
+- Share all data analysis for Product team
+
+--- .segue bg:blue
+
+## Why
+
+---
+## Data Product
+* Share data analysis with many teams
+* Data is always ready for the team
+* Less request to 're-run' analysis
+* Teams can easily slice and dice data as needed
+* Intuitive Navigation
+* Help modals to explain details of chart
+* Add nice styles and web features
+* One place to see everything that matters for a team
+
+--- .segue bg:blue
+
+## What
+
+---
+## Product Data Hub
+![img](assets/img/data_hub.png)
+
+
+
+--- .segue bg:blue
+
+## How
+
+---
+## Product Data Hub
+![img](assets/img/data_hub.png)
+
+
+---
+## Build a simple shiny App
+![img](assets/img/histogram_example.png)
+
+---
+## ui.R
+
+```r
+shinyUI(pageWithSidebar(
+  headerPanel("Simple Histogram App"),
+  sidebarPanel(
+    selectInput(inputId = "n_breaks",
+                label = "Number of bins",
+                choices = c(10, 20, 25, 30, 50),
+                selected = 20
+                )
+  ),
+  mainPanel(
+    plotOutput(outputId = "main_plot")
+  )
+))
+```
+
+---
+## server.r
+
+```r
+shinyServer(function(input,output){
+
+  output$main_plot <- renderPlot({  
+    hist(faithful$eruptions,
+         breaks = as.numeric(input$n_breaks),
+         col = "green",
+         xlab = "Duration (minutes)")  
+  })
+})
+```
+
+
+---
+## Add Interactive Charts
+
+<iframe src='
+assets/fig/unnamed-chunk-2.html
+' scrolling='no' seamless class='rChart 
+nvd3
+ '
+id=iframe-
+chart1c355961a45e
+></iframe>
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+
+---
+## Add Interactive Charts
+
+
+```r
+require(rCharts)
+haireye = as.data.frame(HairEyeColor)
+n1 <- nPlot(Freq ~ Hair, 
+  group = 'Eye',
+  data = subset(haireye, Sex == 'Male'),
+  type = 'multiBarChart'
+)
+n1
+```
+
+---
+## Interactive analysis and chart
+
+![img](assets/img/interactive_analysis.png)
+
+---
+## Check out exampes
+http://shiny.rstudio.com/gallery/kmeans-example.html
+
+![img](assets/img/cluster_example.png)
+
+---
+## Add more input options
 http://shiny.rstudio.com/gallery/widgets-gallery.html
-
 
 ![img](assets/img/widgets.png)
 
 ---
-## Example tool with code snipets
-http://shiny.rstudio.com/gallery/kmeans-example.html
+## Add more functionality
+http://shiny.rstudio.com/reference/shiny/latest/
 
+![img](assets/img/functions.png)
 
-![img](assets/img/cluster_example.png)
+--- 
+## Add navigation
+http://shiny.rstudio.com/reference/shiny/latest/
 
---- .fill .nobackground
-## Embed html easily
+![img](assets/img/nav.png)
 
-```S
-tabPanel("tableau", includeHTML("tableau_dashboard.html"), align = 'center')
-```
+---
+## Chose a theme
+http://bootswatch.com/
+
+![img](assets/img/theme.png)
+
+--- 
+## Embed other pages
 
 ![img](assets/img/tableau_dashboard.png)
 
 ---
-## Basic Plot
+## Embed other pages
 
 
 ```r
-r1 <- rPlot(mpg ~ wt | am + vs, 
-  data = mtcars, 
-  color = 'gear',
-  type = 'point'
-)
-r1
+tabPanel("tableau", includeHTML("tableau_dashboard.html"), align = 'center')
 ```
-
----
-
-<iframe src='
-assets/fig/unnamed-chunk-3.html
-' scrolling='no' seamless class='rChart 
-polycharts
- '
-id=iframe-
-chart1c355a43512e
-></iframe>
-<style>iframe.rChart{ width: 100%; height: 400px;}</style>
-
----
-
-## Add Controls
-
-
-```r
-r1$addControls("x", "wt", names(mtcars))
-r1$addControls("y", "mpg", names(mtcars))
-r1
-```
-
----
-
-<iframe src='
-assets/fig/unnamed-chunk-4.html
-' scrolling='no' seamless class='rChart 
-polycharts
- '
-id=iframe-
-chart1c355a43512e
-></iframe>
-<style>iframe.rChart{ width: 100%; height: 400px;}</style>
-
----
-
-## Publish Chart
+- Tableau
+- Splunk
+- You tube
+- Whatever
 
 ---
 ## Resources
