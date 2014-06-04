@@ -61,7 +61,6 @@ n1 <- nPlot(y ~ x, group, type, data)
 - Mech Engr -> Building Energy Researcher -> Data Scientist
 - Product Data Scientist at Rally Software
 - Love exploring tools and techniques
-- Expert at nothing
 
 ---
 ## Who is Rally?
