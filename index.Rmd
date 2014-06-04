@@ -57,10 +57,10 @@ n1 <- nPlot(y ~ x, group, type, data)
 
 ---
 ## About Me
+- Mech Engr -> Building Energy Researcher -> Data Scientist
 - Product Data Scientist at Rally Software
-- Before that... Data analyst at two startups in Boulder
-- Berore that... Masters in building energy science
-- Before that... Mechanical engineer
+- Love exploring tools and techniques
+- Expert at nothing
 
 ---
 ## Who is Rally?
@@ -76,10 +76,10 @@ n1 <- nPlot(y ~ x, group, type, data)
 
 ---
 ## How I work with teams
-- I work with UX team
-- I work with product owners and developer teams
-- I work with data engineers and programmers
-- I focus on data analytics for our main product
+- UX team
+- Product owners and developer teams
+- Data engineers and programmers
+- I focus on data analytics to improve product usability 
 
 --- .segue bg:blue
 
@@ -93,7 +93,8 @@ n1 <- nPlot(y ~ x, group, type, data)
 ## Product Data Hub
 - Its a full featured bootstrap webpage
 - Built with R and Shiny
-- Share all data analysis for Product team
+- Interactive analysis
+- Hub to share all analyses with Product team
 
 --- .segue bg:blue
 
@@ -101,19 +102,14 @@ n1 <- nPlot(y ~ x, group, type, data)
 
 ---
 ## Data Product
-* Share data analysis with many teams
-* Data is always ready for the team
-* Less request to 're-run' analysis
 * Teams can easily slice and dice data as needed
-* Intuitive Navigation
-* Help modals to explain details of chart
-* Add nice styles and web features
-* One place to see everything that matters for a team
+* Don't have to 're-run' analysis. Always updated and available
+* One place to see everything that matters
+* Web functionality (navigation, modals, styles)
 
 ---
 ## Product Data Hub
 ![img](assets/img/data_hub.png)
-
 
 --- .segue bg:blue
 
