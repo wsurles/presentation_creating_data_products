@@ -248,7 +248,7 @@ D3 in slides http://ramnathv.github.io/rCharts/
 
 rCharts http://ramnathv.github.io/rCharts/
 
-My tutorial on github https://github.com/wsurles/shiny_workshop
+My tutorial https://github.com/wsurles/shiny_workshop
 
 
 
